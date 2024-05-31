@@ -81,7 +81,7 @@
                                             @if ($response->bukti_reimburs === null || $response->bukti_reimburs === '')
                                                 <input type="file" name="upload" id="upload">
                                             @else
-                                                <p>Bukti telah diunggah.</p>
+                                                <img src="{{ 'https://composed-included-bug.ngrok-free.app/reimburst' . $response->bukti_reimburs }}" alt="">
                                             @endif
                                         </td>
                                     </tr>

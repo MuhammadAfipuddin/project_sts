@@ -35,7 +35,7 @@
                         @if (Session::has('error'))
                             <div class="alert alert-danger" role="alert">
                                 {{-- <p>{{ Session::get('error') }}</p> --}}
-                                <p class="h5 text-center text-danger">Nominal Tidak Boleh Minus atau 0!</p>
+                                <p class="h5 text-center text-danger">Nominal Tidak Boleh Minus atau 0!</p> 
                             </div>
                         @endif
                         <div class="mb-3 row">

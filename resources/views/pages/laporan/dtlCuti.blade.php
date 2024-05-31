@@ -62,7 +62,7 @@
                                     <tr>
                                         <td>Bukti</td>
                                         <td>:</td>
-                                        <td><img src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/cuti' . $response->upload_bukti_cuti }}"
+                                        <td><img src="{{ 'https://composed-included-bug.ngrok-free.app/cuti' . $response->upload_bukti_cuti }}"
                                                 alt="{{ $response->upload_bukti_cuti }}" width="30%"
                                                 style="border-radius: 10px;"></td>
                                     </tr>

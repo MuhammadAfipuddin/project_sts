@@ -99,7 +99,7 @@
                                                     <input type="file" name="upload" id="upload">
                                                 @else
                                                 <img id="bukti_serah_terima"
-                                                                        src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/serahterima' . $response->bukti_serah_terima }}"
+                                                                        src="{{ 'https://composed-included-bug.ngrok-free.app/serahterima' . $response->bukti_serah_terima }}"
                                                                         alt="{{ $response->bukti_serah_terima }}"
                                                                         width="30%" style="border-radius: 10px;">
                                                 @endif

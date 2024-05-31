@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <img class="ml-4 mb-4 shadow"
-                                src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/barang' . $response->gambar_pinjam_barang }}"
+                                src="{{ 'https://composed-included-bug.ngrok-free.app/barang' . $response->gambar_pinjam_barang }}"
                                 alt="{{ $response->gambar_pinjam_barang }}" width="50%" style="border-radius: 10px;">
                         </div>
                         <div class="col-md-9">

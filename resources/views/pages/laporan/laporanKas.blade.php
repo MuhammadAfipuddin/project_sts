@@ -2,8 +2,8 @@
 @section('title', 'Laporan Kas')
 @section('content')
     <div class="container-fluid" style="margin: 0; padding: 0;">
-        <div class="row d-flex justify-content-between align-itemms-center shadow-lg">
-            <div class="col-12 d-flex align-items-center justify-content-between">
+        <div class="row d-flex justify-content-between align-itemms-center shadow">
+            <div class="col-md-12 d-flex align-items-center justify-content-between">
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle ml-3">
                     <i class="fa fa-bars"></i>
                 </button>
@@ -18,7 +18,7 @@
 
         <div class="row d-flex align-items-center">
             <div class="col-md-6">
-                <p class="h5 pt-4 pb-3 pl-4 text-dark font-weight-bold text-start">Laporan Pemasukan & Pengeluaran
+                <p class="h5 pt-4 pl-4 text-dark font-weight-bold text-start">Laporan Pemasukan & Pengeluaran
                 </p>
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-end">
@@ -38,17 +38,17 @@
                         </div>
                     @endif
                     <div class="row mb-3">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label for="date_start" class="form-label">Tanggal Awal</label>
                             <input class="form-control" type="date" name="date_start" id="date_start"
                                 value="{{ request('date_start') }}">
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label for="date_end" class="form-label">Tanggal Akhir</label>
                             <input class="form-control" type="date" name="date_end" id="date_end"
                                 value="{{ request('date_end') }}">
                         </div>
-                        <div class="col-12 mt-3 d-flex justify-content-center">
+                        <div class="col-md-12 mt-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary">Filter</button>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                                                                 <a href="#" data-toggle="modal"
                                                                     data-target="#modalFoto{{ $kasmas->id_kas_masuk }}">
                                                                     <img id="bukti_pemasukan"
-                                                                        src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/pemasukan' . $kasmas->bukti_transaksi }}"
+                                                                        src="{{ 'https://composed-included-bug.ngrok-free.app/pemasukan' . $kasmas->bukti_transaksi }}"
                                                                         alt="{{ $kasmas->bukti_transaksi }}" width="30%"
                                                                         style="border-radius: 10px;">
                                                                 </a>
@@ -144,7 +144,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body text-center">
-                                                                        <img src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/pemasukan' . $kasmas->bukti_transaksi }}"
+                                                                        <img src="{{ 'https://composed-included-bug.ngrok-free.app/pemasukan' . $kasmas->bukti_transaksi }}"
                                                                             alt="{{ $kasmas->bukti_transaksi }}"
                                                                             style="width: 100%;">
                                                                     </div>
@@ -197,7 +197,6 @@
                                                             <td class="align-middle" width="15%">
                                                                 {{ $keluar->nama_penerima }}
                                                             </td>
-                                                            {{-- COOOOOBBBAAAAAAAAA --}}
                                                             <td class="align-middle" width="15%">
                                                                 {{ date('d-m-Y', strtotime($keluar->tanggal_waktu)) }}
                                                             </td>
@@ -209,7 +208,7 @@
                                                                 <a href="#" data-toggle="modal"
                                                                     data-target="#modalFoto{{ $keluar->id_kas_keluar }}">
                                                                     <img id="bukti_pengeluaran"
-                                                                        src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/pengeluaran' . $keluar->bukti_transaksi }}"
+                                                                        src="{{ 'https://composed-included-bug.ngrok-free.app/pengeluaran' . $keluar->bukti_transaksi }}"
                                                                         alt="{{ $keluar->bukti_transaksi }}"
                                                                         width="30%" style="border-radius: 10px;">
                                                                 </a>
@@ -243,7 +242,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body text-center">
-                                                                        <img src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/pengeluaran' . $keluar->bukti_transaksi }}"
+                                                                        <img src="{{ 'https://composed-included-bug.ngrok-free.app/pengeluaran' . $keluar->bukti_transaksi }}"
                                                                             alt="{{ $keluar->bukti_transaksi }}"
                                                                             style="width: 100%;">
                                                                     </div>

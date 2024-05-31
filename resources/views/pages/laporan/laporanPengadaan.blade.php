@@ -211,7 +211,7 @@
                                                             <td class="align-middle">{{ $serter->nama_penyerah }}</td>
                                                             <td class="align-middle">{{ $serter->created_at }}</td>
                                                             <td class="align-middle"><img
-                                                                    src="{{ 'https://spaniel-vast-pheasant.ngrok-free.app/serahterima' . $serter->bukti_serah_terima }}"
+                                                                    src="{{ 'https://composed-included-bug.ngrok-free.app/serahterima' . $serter->bukti_serah_terima }}"
                                                                     alt="{{ $serter->bukti_serah_terima }}"
                                                                     width="20%" style="border-radius: 10px;"></td>
                                                         </tr>
