@@ -53,14 +53,9 @@
                                         <td>{{ $user->tipe_role }}</td>
                                         <td>{{ $user->stok_cuti }}</td>
                                         <td>
-                                            <form action="{{ route('userManagement.destroy', $user->id_user) }}"
-                                                method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" onclick="return confirm('Apakah kamu yakin ingin menghapus {{ $user->nama }}?')">
-                                                    <i class="fa fa-trash text-danger"></i>
-                                                </button>
-                                            </form>
+                                            <a class="nav-link" data-toggle="modal" data-target="#logoutModal" href="{{ route('userManagement.destroy', $user->id_user) }}">
+                                                <i class="fa fa-trash text-danger"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -70,6 +65,32 @@
                 </div>
             </div>
         </div>
+
+        {{-- Modal hapus --}}
+        <div class="modal" tabindex="-1" id="logoutModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-red-700">Konfirmasi Hapus Akun</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Apakah anda yakin ingin menghapus akun {{ $user->nama }}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                  <form action="{{ route('userManagement.destroy', $user->id_user) }}"
+                    method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">
+                        Hapus
+                    </button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
 
     </div>
 @endsection

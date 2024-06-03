@@ -54,14 +54,9 @@
                                                 href="{{ route('laporan.dtlInventory', $inventory->id_barang) }}">Detail</a>
                                         </td>
                                         <td>
-                                            <form action="{{ route('inventory.destroy', $inventory->id_barang) }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit"
-                                                    onclick="return confirm('Apakah kamu yakin ingin menghapus {{ $inventory->nama_barang }}?')"><i
-                                                        class="fa fa-trash text-danger"></i></button>
-                                            </form>
+                                            <a class="nav-link" data-toggle="modal" data-target="#hapusBarang" href="{{ route('inventory.destroy', $inventory->id_barang) }}">
+                                                <i class="fa fa-trash text-danger"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -71,6 +66,33 @@
                 </div>
             </div>
         </div>
+
+        {{-- Modal hapus --}}
+        <div class="modal" tabindex="-1" id="hapusBarang">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-red-700">Konfirmasi Hapus Barang</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Apakah anda yakin ingin menghapus barang {{ $inventory->nama_barang }}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                  <form action="{{ route('inventory.destroy', $inventory->id_barang) }}"
+                    method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">
+                        Hapus
+                    </button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
     </div>
 @endsection
 @push('script')

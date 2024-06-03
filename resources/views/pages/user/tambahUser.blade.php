@@ -67,7 +67,7 @@
                                         </span>
                                     </div>
                                     <input type="password" class="form-control" id="password"
-                                        placeholder="Masukkan Password" name="password" required>
+                                        placeholder="Masukkan Password" name="password" minlength="8" required>
                                 </div>
                             </div>
                         </div>
@@ -118,8 +118,15 @@
 @push('script')
     <script>
         function myAlert() {
-            if ($('#nama_pengguna').val() != '' && $('#username').val() != '' && $('#password').val() != '' && $(
-                    '#nomor').val() != '' && $('#email').val() != '' && $('#role').val() != '') {
+            let namaPengguna = $('#nama_pengguna').val();
+            let username = $('#username').val();
+            let password = $('#password').val();
+            let nomor = $('#nomor').val();
+            let email = $('#email').val();
+            let role = $('#role').val();
+
+            if (namaPengguna != '' && username != '' && password != '' && password.length >= 8 && nomor != '' && email !=
+                '' && role != '') {
                 Swal.fire({
                     position: "center",
                     icon: "success",
@@ -128,20 +135,25 @@
                     timer: 1500
                 });
             } else {
+                let errorMessage = "Mohon di isi semua ya!";
+                if (password.length < 8) {
+                    errorMessage = "Password harus memiliki minimal 8 karakter!";
+                }
                 Swal.fire({
                     position: "center",
-                    icon: "failed",
-                    title: "Mohon di isi semua ya!",
+                    icon: "error", // Mengubah icon menjadi 'error' bukan 'failed'
+                    title: errorMessage,
                     showConfirmButton: false,
                     timer: 1500
                 });
             }
         }
 
+
         $(document).ready(function() {
             $("#togglePassword").click(function() {
-                var passwordField = $("#password");
-                var passwordFieldType = passwordField.attr("type");
+                let passwordField = $("#password");
+                let passwordFieldType = passwordField.attr("type");
                 if (passwordFieldType == "password") {
                     passwordField.attr("type", "text");
                     $(this).removeClass("fa-eye").addClass("fa-eye-slash");
@@ -153,8 +165,8 @@
         });
 
         document.getElementById('nama_pengguna').addEventListener('input', function(event) {
-            var input = event.target;
-            var value = input.value;
+            let input = event.target;
+            let value = input.value;
             input.value = value.replace(/[^a-zA-Z\s]/g, '');
         });
     </script>

@@ -27,7 +27,7 @@
 
     <style>
         .nav-link:hover {
-            background: #9c9c9c;
+            background: #dfb64e;
             transition: all ease-in 0.3s;
             border-radius: 20px;
         }
@@ -108,7 +108,7 @@
             <hr class="sidebar-divider d-none d-md-block mt-3 border border-3">
 
             <li class="nav-item active">
-                <a id="dashboard-tab" class="nav-link" href="/">
+                <a id="dashboard-tab" class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
