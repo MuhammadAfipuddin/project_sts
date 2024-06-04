@@ -27,7 +27,7 @@
 
     <style>
         .nav-link:hover {
-            background: #dfb64e;
+            background: rgb(56, 60, 65);
             transition: all ease-in 0.3s;
             border-radius: 20px;
         }
@@ -42,7 +42,7 @@
             font-weight: 700;
             color: #ffffff;
             background: #614fe6;
-            background: linear-gradient(90deg, rgb(68, 62, 223) 0%, rgbargb(79, 92, 209)%);
+            background: linear-gradient(90deg, rgb(92, 87, 234) 0%, rgbargb(79, 92, 209)%);
             border: none;
             border-radius: 1000px;
             box-shadow: 6px 6px 18px rgba(99, 79, 209, 0.64);
@@ -102,7 +102,6 @@
                         alt="{{ Session::get('profil') }}">
                 </div>
                 <div class="sidebar-brand-text mx-3">{{ Session::get('username') }}</div>
-                {{-- <div class="sidebar-brand-text mx-3">{{ Session::get('tipe_role') }}</div> --}}
             </a>
 
             <hr class="sidebar-divider d-none d-md-block mt-3 border border-3">
