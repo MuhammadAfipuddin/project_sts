@@ -108,81 +108,108 @@
             <hr class="sidebar-divider d-none d-md-block mt-3 border border-3">
 
             <li class="nav-item active">
-                <a id="dashboard-tab" class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a id="dashboard-tab"
+                    class="nav-link {{ Request::is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}"
+                    href="{{ route('dashboard') }}">
+                    <i class="fas fa-fw fa-tachometer-alt text-light"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-money-bill"></i>
+                <a class="nav-link collapsed {{ Request::is('pemasukan') || Request::is('pengeluaran') || Request::is('reimbursement') || Request::is('laporan/laporanKas') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}"
+                    href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-money-bill text-light"></i>
                     <span>Kas Keuangan</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a id="pemasukan-tab" class="collapse-item" href="{{ route('pemasukan.index') }}">Pemasukan</a>
-                        <a id="pengeluaran-tab" class="collapse-item"
+                        <a id="pemasukan-tab"
+                            class="collapse-item {{ Request::is('pemasukan') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('pemasukan.index') }}">Pemasukan</a>
+                        <a id="pengeluaran-tab"
+                            class="collapse-item {{ Request::is('pengeluaran') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
                             href="{{ route('pengeluaran.index') }}">Pengeluaran</a>
-                        <a id="reimbursement-tab" class="collapse-item"
+                        <a id="reimbursement-tab"
+                            class="collapse-item {{ Request::is('reimbursement') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
                             href="{{ route('reimbursement.index') }}">Reimbursement
                             <span class="badge badge-center rounded-pill bg-danger" id="pepek"></span>
                         </a>
-                        <a id="laporan-kas-tab" class="collapse-item" href="{{ route('laporan.laporanKas') }}">Laporan</a>
+                        <a id="laporan-kas-tab"
+                            class="collapse-item {{ Request::is('laporan/laporanKas') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('laporan.laporanKas') }}">Laporan</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                <a class="nav-link collapsed {{ Request::is('inventory') || Request::is('peminjaman') || Request::is('pengajuan') || Request::is('laporan/laporanPengadaan') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}"
+                    href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
+                    aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench text-light"></i>
                     <span>Pengadaan Barang</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a id="inventory-tab" class="collapse-item" href="{{ route('inventory.index') }}">Inventory</a>
-                        <a id="peminjaman-tab" class="collapse-item" href="{{ route('peminjaman.index') }}">Peminjaman
+                        <a id="inventory-tab"
+                            class="collapse-item {{ Request::is('inventory') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('inventory.index') }}">Inventory</a>
+                        <a id="peminjaman-tab"
+                            class="collapse-item {{ Request::is('peminjaman') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('peminjaman.index') }}">Peminjaman
                             <span class="badge badge-center rounded-pill bg-danger" id="pinjamBarang"></span>
                         </a>
-                        <a id="pengajuan-tab" class="collapse-item" href="{{ route('pengajuan.index') }}">Pengajuan Barang
+                        <a id="pengajuan-tab" class="collapse-item {{ Request::is('pengajuan') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('pengajuan.index') }}">Pengajuan
+                            Barang
                             <span class="badge badge-center rounded-pill bg-danger" id="pengajuanBarang"></span></a>
-                        <a id="laporan-pengadaan-tab" class="collapse-item" href="{{ route('laporan.laporanPengadaan') }}">Laporan
+                        <a id="laporan-pengadaan-tab"
+                            class="collapse-item {{ Request::is('laporan/laporanPengadaan') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('laporan.laporanPengadaan') }}">Laporan
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
+                <a class="nav-link collapsed {{ Request::is('datapengajuancuti') || Request::is('laporan/laporanCuti') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}"
+                    href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+                    aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder text-light"></i>
                     <span>Pengajuan Cuti & Izin</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a id="pengajuan-cuti-tab" class="collapse-item" href="{{ route('datapengajuancuti.index') }}">Data Pengajuan
+                        <a id="pengajuan-cuti-tab"
+                            class="collapse-item {{ Request::is('datapengajuancuti') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('datapengajuancuti.index') }}">Data Pengajuan
                             Cuti
                             <span class="badge badge-center rounded-pill bg-danger" id="pengajuanCuti"></span>
                         </a>
-                        <a id="laporan-cuti-tab" class="collapse-item" href="{{ route('laporan.laporanCuti') }}">Laporan Cuti</a>
+                        <a id="laporan-cuti-tab"
+                            class="collapse-item {{ Request::is('laporan/laporanCuti') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                            href="{{ route('laporan.laporanCuti') }}">Laporan Cuti</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a id="profile-tab" class="nav-link" href="{{ route('profile.index') }}">
-                    <i class="bi bi-person-fill"></i>
+                <a id="profile-tab"
+                    class="nav-link {{ Request::is('profile') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}"
+                    href="{{ route('profile.index') }}">
+                    <i class="bi bi-person-fill text-light"></i>
                     <span>Profile</span></a>
             </li>
 
             <li class="nav-item">
-                <a id="user-management-tab" class="nav-link" href="{{ route('userManagement.index') }}">
-                    <i class="bi bi-person-add"></i>
+                <a id="user-management-tab"
+                    class="nav-link {{ Request::is('userManagement') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}"
+                    href="{{ route('userManagement.index') }}">
+                    <i class="bi bi-person-add text-light"></i>
                     <span>User Management</span></a>
             </li>
 
@@ -191,7 +218,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#logoutModal" href="{{ route('logout') }}">
-                    <i class="fa fa-sign"></i>
+                    <i class="fa fa-sign text-light"></i>
                     <span>Logout</span>
                 </a>
             </li>
