@@ -62,22 +62,22 @@
             <div class="col-md-12">
                 <ul class="nav nav-pills mb-3 justify-content-evenly" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-pengajuan-tab" data-bs-toggle="pill"
+                        <button class="nav-link active h5 tombol" id="pills-pengajuan-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-pengajuan" type="button" role="tab" aria-controls="pills-pengajuan"
                             aria-selected="true">Laporan Pengajuan Barang</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-peminjaman-tab" data-bs-toggle="pill"
+                        <button class="nav-link h5 tombol" id="pills-peminjaman-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-peminjaman" type="button" role="tab"
                             aria-controls="pills-peminjaman" aria-selected="false">Laporan Peminjaman Barang</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-inventory-tab" data-bs-toggle="pill"
+                        <button class="nav-link h5 tombol" id="pills-inventory-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-inventory" type="button" role="tab"
                             aria-controls="pills-inventory" aria-selected="false">Laporan Inventory</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-serah-terima-tab" data-bs-toggle="pill"
+                        <button class="nav-link h5 tombol" id="pills-serah-terima-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-serah-terima" type="button" role="tab"
                             aria-controls="pills-serah-terima" aria-selected="false">Laporan Serah/Terima Barang</button>
                     </li>

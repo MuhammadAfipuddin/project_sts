@@ -30,57 +30,102 @@
             background: rgb(56, 60, 65);
             transition: all ease-in 0.3s;
             border-radius: 20px;
-        }
-
-        .btn {
-            min-width: auto;
-            min-height: auto;
-            font-family: 'Nunito', sans-serif;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-            font-weight: 700;
             color: #ffffff;
-            background: #614fe6;
-            background: linear-gradient(90deg, rgb(92, 87, 234) 0%, rgbargb(79, 92, 209)%);
-            border: none;
-            border-radius: 1000px;
-            box-shadow: 6px 6px 18px rgba(99, 79, 209, 0.64);
-            transition: all 0.3s ease-in-out 0s;
-            cursor: pointer;
-            outline: none;
-            position: relative;
-            padding: 6px 12px;
+            /* Tambahkan ini agar teks berwarna putih saat di-hover */
         }
 
-        .topbar {
-            height: 4.375rem
+        .nav-link.active {
+            background: #4f5cd1;
+            color: #ffffff;
         }
 
-        .topbar #sidebarToggleTop {
-            height: 2.5rem;
-            width: 2.5rem
-        }
+            .btn {
+                min-width: auto;
+                min-height: auto;
+                font-family: 'Nunito', sans-serif;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1.3px;
+                font-weight: 700;
+                color: #ffffff;
+                background: #614fe6;
+                background: linear-gradient(90deg, rgb(92, 87, 234) 0%, rgb(79, 92, 209) 100%);
+                border: none;
+                border-radius: 1000px;
+                box-shadow: 6px 6px 18px rgba(99, 79, 209, 0.64);
+                transition: all 0.3s ease-in-out 0s;
+                cursor: pointer;
+                outline: none;
+                position: relative;
+                padding: 6px 12px;
+            }
 
-        .topbar #sidebarToggleTop:hover {
-            background-color: #eaecf4
-        }
+            .topbar {
+                height: 4.375rem;
+            }
 
-        .topbar #sidebarToggleTop:active {
-            background-color: #dddfeb
-        }
+            .topbar #sidebarToggleTop {
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+
+            .topbar #sidebarToggleTop:hover {
+                background-color: #eaecf4;
+            }
+
+            .topbar #sidebarToggleTop:active {
+                background-color: #dddfeb;
+            }
+
+            /* Button style */
+            .tombol {
+                align-items: center;
+                appearance: none;
+                background-image: radial-gradient(100% 100% at 100% 0, #5adaff 25%, #5468ff 100%);
+                border: 0;
+                border-radius: 6px;
+                box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+                box-sizing: border-box;
+                color: #fff;
+                cursor: pointer;
+                display: inline-flex;
+                font-family: "JetBrains Mono", monospace;
+                height: 48px;
+                justify-content: center;
+                line-height: 1;
+                list-style: none;
+                overflow: hidden;
+                padding-left: 16px;
+                padding-right: 16px;
+                position: relative;
+                text-align: left;
+                text-decoration: none;
+                transition: box-shadow .2s, transform .2s;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: nowrap;
+                will-change: box-shadow, transform;
+                font-size: 18px;
+            }
+
+            .tombol:focus {
+                box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            }
+
+            .tombol:hover {
+                box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+                transform: translateY(-2px);
+                color: #fff;
+                /* Tambahkan ini agar teks berwarna putih saat di-hover */
+            }
+
+            .tombol:active {
+                box-shadow: #3c4fe0 0 3px 7px inset;
+                transform: translateY(2px);
+            }
     </style>
 
-
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script>
-        window.OneSignalDeferred = window.OneSignalDeferred || [];
-        OneSignalDeferred.push(function(OneSignal) {
-            OneSignal.init({
-                appId: "5f287263-03af-476a-953c-1d919b3202aa",
-            });
-        });
-    </script>
 
 
 </head>
@@ -160,7 +205,8 @@
                             href="{{ route('peminjaman.index') }}">Peminjaman
                             <span class="badge badge-center rounded-pill bg-danger" id="pinjamBarang"></span>
                         </a>
-                        <a id="pengajuan-tab" class="collapse-item {{ Request::is('pengajuan') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
+                        <a id="pengajuan-tab"
+                            class="collapse-item {{ Request::is('pengajuan') ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white' }}"
                             href="{{ route('pengajuan.index') }}">Pengajuan
                             Barang
                             <span class="badge badge-center rounded-pill bg-danger" id="pengajuanBarang"></span></a>
