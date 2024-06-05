@@ -23,110 +23,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/master-style.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ asset('assets/img/Logo-sts.jpg') }}" type="image/jpg">
-
-    <style>
-        .nav-link:hover {
-            background: rgb(56, 60, 65);
-            transition: all ease-in 0.3s;
-            border-radius: 20px;
-            color: #ffffff;
-            /* Tambahkan ini agar teks berwarna putih saat di-hover */
-        }
-
-        .nav-link.active {
-            background: #4f5cd1;
-            color: #ffffff;
-        }
-
-            .btn {
-                min-width: auto;
-                min-height: auto;
-                font-family: 'Nunito', sans-serif;
-                font-size: 14px;
-                text-transform: uppercase;
-                letter-spacing: 1.3px;
-                font-weight: 700;
-                color: #ffffff;
-                background: #614fe6;
-                background: linear-gradient(90deg, rgb(92, 87, 234) 0%, rgb(79, 92, 209) 100%);
-                border: none;
-                border-radius: 1000px;
-                box-shadow: 6px 6px 18px rgba(99, 79, 209, 0.64);
-                transition: all 0.3s ease-in-out 0s;
-                cursor: pointer;
-                outline: none;
-                position: relative;
-                padding: 6px 12px;
-            }
-
-            .topbar {
-                height: 4.375rem;
-            }
-
-            .topbar #sidebarToggleTop {
-                height: 2.5rem;
-                width: 2.5rem;
-            }
-
-            .topbar #sidebarToggleTop:hover {
-                background-color: #eaecf4;
-            }
-
-            .topbar #sidebarToggleTop:active {
-                background-color: #dddfeb;
-            }
-
-            /* Button style */
-            .tombol {
-                align-items: center;
-                appearance: none;
-                background-image: radial-gradient(100% 100% at 100% 0, #5adaff 25%, #5468ff 100%);
-                border: 0;
-                border-radius: 6px;
-                box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
-                box-sizing: border-box;
-                color: #fff;
-                cursor: pointer;
-                display: inline-flex;
-                font-family: "JetBrains Mono", monospace;
-                height: 48px;
-                justify-content: center;
-                line-height: 1;
-                list-style: none;
-                overflow: hidden;
-                padding-left: 16px;
-                padding-right: 16px;
-                position: relative;
-                text-align: left;
-                text-decoration: none;
-                transition: box-shadow .2s, transform .2s;
-                user-select: none;
-                -webkit-user-select: none;
-                touch-action: manipulation;
-                white-space: nowrap;
-                will-change: box-shadow, transform;
-                font-size: 18px;
-            }
-
-            .tombol:focus {
-                box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-            }
-
-            .tombol:hover {
-                box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-                transform: translateY(-2px);
-                color: #fff;
-                /* Tambahkan ini agar teks berwarna putih saat di-hover */
-            }
-
-            .tombol:active {
-                box-shadow: #3c4fe0 0 3px 7px inset;
-                transform: translateY(2px);
-            }
-    </style>
-
-
 
 </head>
 
@@ -286,7 +184,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white shadow">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; PT. Shibly Teknologi Solusi 2024</span>

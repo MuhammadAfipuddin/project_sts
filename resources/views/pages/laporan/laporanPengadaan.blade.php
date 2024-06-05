@@ -56,8 +56,6 @@
             </div>
         </div>
 
-        <hr class="border border-3 border-dark mx-4 mb-4 ">
-
         <div class="row mt-3 mb-5">
             <div class="col-md-12">
                 <ul class="nav nav-pills mb-3 justify-content-evenly" id="pills-tab" role="tablist">
