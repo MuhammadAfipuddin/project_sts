@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -50,7 +48,7 @@
                                         <td>{{ $inventory->nama_barang }}</td>
                                         <td>{{ $inventory->kategori }}</td>
                                         <td>{{ $inventory->total_seluruhnya }}</td>
-                                        <td><a class="bg-primary text-light pt-2 pb-2 pr-2 pl-2 rounded"
+                                        <td class="align-middle"><a class="bg-primary text-light py-2 px-2 rounded"
                                                 href="{{ route('laporan.dtlInventory', $inventory->id_barang) }}">Detail</a>
                                         </td>
                                         <td>

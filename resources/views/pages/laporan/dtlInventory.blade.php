@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -75,7 +73,7 @@
                                             <td></td>
                                             <td class="d-flex justify-content-end"><a
                                                     href="{{ route('page_update_stok', $response->id_barang) }}"
-                                                    class="btn btn-primary">Update</a></td>
+                                                    class="btn btn-primary tombol">Update</a></td>
                                         </tr>
                                     </tbody>
                                 </table>

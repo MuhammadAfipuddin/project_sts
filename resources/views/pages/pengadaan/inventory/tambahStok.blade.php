@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -93,7 +91,7 @@
                         </div>
 
                         <div class="col-md-12 d-flex justify-content-end mb-3 mt-3">
-                            <button type="submit" class="btn btn-primary" onclick="myAlert()">Upload</button>
+                            <button type="submit" class="btn btn-primary tombol" onclick="myAlert()">Upload</button>
                         </div>
                     </form>
                 </div>

@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -90,10 +88,10 @@
                                         <td></td>
                                         <td class="col-12 d-flex justify-content-end">
                                             @if ($response->bukti_reimburs === null || $response->bukti_reimburs === '')
-                                                <button type="submit" class="btn text-light bg-primary mr-3"
+                                                <button type="submit" class="btn tombol text-light bg-primary mr-3"
                                                     onclick="myAlert()">Kirim</button>
                                             @else
-                                                <button type="submit" class="btn text-light bg-primary mr-3"
+                                                <button type="submit" class="btn tombol text-light bg-primary mr-3"
                                                     onclick="myAlert()" disabled>Kirim</button>
                                             @endif
                                         </td>
@@ -115,8 +113,8 @@
 
             Swal.fire({
                 position: "center",
-                icon: isComplete ? "success" : "failed",
-                title: isComplete ? "Form Berhasil Dikirim" : "Mohon di isi semua ya!",
+                icon: isComplete ? "success" : "error",
+                title: isComplete ? "Form Berhasil Dikirim" : "Bukti pengembalian tidak boleh kosong!",
                 showConfirmButton: false,
                 timer: 1500
             });

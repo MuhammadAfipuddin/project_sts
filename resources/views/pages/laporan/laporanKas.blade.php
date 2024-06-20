@@ -10,9 +10,6 @@
                 <p class="h4 pt-4 pb-4 pl-4 text-primary font-weight-bold text-start">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href="">
-                    <i class="h2 bi bi-bell-fill pr-4 text-primary"></i>
-                </a>
             </div>
         </div>
 
@@ -49,7 +46,7 @@
                                 value="{{ request('date_end') }}">
                         </div>
                         <div class="col-md-12 mt-3 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">Filter</button>
+                            <button type="submit" class="btn tombol btn-primary">Filter</button>
                         </div>
                     </div>
                 </form>
@@ -60,13 +57,12 @@
             <div class="col-md-12">
                 <ul class="nav nav-pills mb-3 justify-content-evenly" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-
-                        <button class="nav-link active h5 tombol" id="laporan-pemasukan-tab" data-bs-toggle="pill"
+                        <button class="nav-link active tombol" id="laporan-pemasukan-tab" data-bs-toggle="pill"
                             data-bs-target="#laporan-pemasukan" type="button" role="tab"
                             aria-controls="laporan-pemasukan" aria-selected="true">Laporan Pemasukan</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link h5 tombol" id="laporan-pengeluaran-tab" data-bs-toggle="pill"
+                        <button class="nav-link tombol" id="laporan-pengeluaran-tab" data-bs-toggle="pill"
                             data-bs-target="#laporan-pengeluaran" type="button" role="tab"
                             aria-controls="laporan-pengeluaran" aria-selected="false">Laporan Pengeluaran</button>
                     </li>

@@ -5,8 +5,6 @@
         <div class="row d-flex justify-content-between align-itemms-center shadow-lg">
             <div class="col-md-12 d-flex align-items-center justify-content-between">
                 <p class="h4 pt-4 pb-4 pl-4 text-primary font-weight-bold text-start">Profile</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -89,7 +87,7 @@
                                     value="{{ Session::get('no_hp') }}">
                             </div>
                             <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary" name="upload"
+                                <button type="submit" class="btn btn-primary tombol" name="upload"
                                     id="upload">Simpan</button>
                             </div>
                         </div>

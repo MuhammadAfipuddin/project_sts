@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -49,7 +47,7 @@
                                 value="{{ request('date_end') }}">
                         </div>
                         <div class="col-12 mt-3 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">Filter</button>
+                            <button type="submit" class="btn tombol btn-primary">Filter</button>
                         </div>
                     </div>
                 </form>

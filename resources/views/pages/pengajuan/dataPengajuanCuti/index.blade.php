@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -26,10 +24,10 @@
                 <p class="text-primary pt-3 ml-2 mt-2 mr-4">Pengajuan Cuti & Izin</p>
             </div>
         </div>
-        <div class="row mt-3 mb-5 mr-5 ml-5">
+        <div class="row mb-5 mx-5">
             <div class="col-md-12">
-                <div class="card-shadow">
-                    <div class="card-body table-responsive">
+            <div class="card-shadow">
+                <div class="card-body table-responsive">
                         <table class="table text-center table-striped">
                             <thead>
                                 <tr>

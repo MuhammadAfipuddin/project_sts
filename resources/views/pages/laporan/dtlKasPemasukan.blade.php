@@ -10,9 +10,6 @@
                 <p class="h4 pt-4 pb-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                    <a data-toggle="modal" data-target="#exampleModal" href="">
-                        <i class="h2 bi bi-bell-fill pr-4 text-primary"></i>
-                    </a>
                 </div>
             </div>
 

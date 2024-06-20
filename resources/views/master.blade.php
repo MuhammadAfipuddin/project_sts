@@ -160,7 +160,7 @@
             <hr class="sidebar-divider d-none d-md-block mt-3 border border-3">
 
             <li class="nav-item">
-                <a class="nav-link" data-toggle="modal" data-target="#logoutModal" href="{{ route('logout') }}">
+                <a class="nav-link" data-toggle="modal" data-target="#logoutModal" href="#">
                     <i class="fa fa-sign text-light"></i>
                     <span>Logout</span>
                 </a>
@@ -205,20 +205,19 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Apakah anda yakin ingin keluar?</h5>
+                    <h5 class="modal-title" id="logoutModalLabel">Apakah anda yakin ingin keluar?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">Pilih "Logout" di bawah jika anda yakin ingin keluar</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}">Logout</a>
+                    <button class="btn btn-secondary tombol" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary tombol" href="{{ route('logout') }}">Logout</a>
                 </div>
             </div>
         </div>

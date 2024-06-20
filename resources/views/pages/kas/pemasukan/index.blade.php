@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -35,7 +33,7 @@
                         @if (Session::has('error'))
                             <div class="alert alert-danger" role="alert">
                                 {{-- <p>{{ Session::get('error') }}</p> --}}
-                                <p class="h5 text-center text-danger">Nominal Tidak Boleh Minus atau 0!</p> 
+                                <p class="h5 text-center text-danger">Nominal Tidak Boleh Minus atau 0!</p>
                             </div>
                         @endif
                         <div class="mb-3 row">
@@ -73,7 +71,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 d-flex justify-content-end">
-                            <button type="submit" onclick="myAlert()" class="btn text-light bg-primary">Kirim</button>
+                            <button type="submit" onclick="myAlert()" class="btn text-light bg-primary tombol">Kirim</button>
                         </div>
                     </form>
                 </div>

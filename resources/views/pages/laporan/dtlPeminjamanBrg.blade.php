@@ -10,8 +10,6 @@
                 <p class="h4 py-4 pl-4 text-primary font-weight-bold text-start mr-3">KPP (Kas Operasional Perusahaan,
                     Pengadaan
                     Barang, Pengajuan Cuti & Izin)</p>
-                <a data-toggle="modal" data-target="#exampleModal" href=""><i
-                        class="h2 bi bi-bell-fill pr-4 text-primary"></i></a>
             </div>
         </div>
 
@@ -26,14 +24,14 @@
                 <p class="text-primary ml-2 mt-2 mr-4">Detail Peminjamanan</p>
             </div>
         </div>
-        <div class="row mb-3 mr-3 ml-3">
+        <div class="row mb-3 mx-3">
             <div class="col-md-12">
                 <div class="card">
-                    <a class="text-black ml-4 mt-4 mb-4" href="{{ route('peminjaman.index') }}">
+                    <a class="text-black ml-4 my-4" href="{{ route('peminjaman.index') }}">
                         <i class="bi bi-caret-left-fill"></i>
                         back
                     </a>
-                    <div class="border rounded border-black border-2 ml-4 mr-4 mb-4">
+                    <div class="border rounded border-black border-2 mx-4 mb-4">
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
